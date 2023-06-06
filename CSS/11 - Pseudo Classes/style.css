@@ -1,0 +1,118 @@
+/* PSEUDO CLASSES 
+
+
+:active -> Quando o elemento está ativo, ou seja, está sendo pressionado
+:visited -> Seleciona o link que foi visitado
+:hover -> Quando o mouse passa por cima do elemento
+:checked -> Usado em radio / checkbox / select
+:disabled -> Elemento desabilitado / button / input
+:enabled -> Elemento está habilitado
+:focus -> É aplicada quando um elemento recebe foco, o que pode ocorrer quando um usuário seleciona o elemento
+:read-only -> Seleciona o input ou textarea que são apenas leitura
+:empty -> Elemento que não tem filho
+
+:first-child -> Primeiro filho / ex: primeira li de uma ul / primeiro span de uma div
+:first-of-type -> Primeiro elemento de seu tipo entre os filhos de seu elemento pai
+:last-child -> Último filho
+:last-of-type -> Último elemento de seu tipo entre os filhos de seu elemento pai
+:not() -> Estiliza os elementos, exceto o que está dentro do ()
+:nth-child() -> Seleciona o elemento baseado na sua posição. Ex: :nth-child(3)
+:nth-last-child() -> Seleciona o elemento baseado na sua posição, contando de trás para frente.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.link-header {
+    color: aqua;
+    text-decoration: none;
+    font-size: 46px;
+}
+
+.link-header:active {
+    color: #0f0;
+}
+
+.link-header:visited {
+    color: #f00;
+}
+
+.link-header:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.form:checked {
+    height: 150px;
+    width: 150px;
+}
+
+.disabled:disabled {
+    width: 887px;
+}
+
+.focus:focus {
+    border-radius: 15px;
+    border: 2px solid #f00;
+    outline: none; /* É para retirar a estilização padrão dos navegadores quando um elemento está em foco */
+}
+
+.read-only:read-only {
+    border: 2px solid #f00;
+    outline: none;
+}
+
+.container {
+    height: 100px;
+    width: 100px;
+    background: #f00;
+}
+
+.container:empty {
+    background: #00f;
+}
+
+li {
+    font-size: 36px;
+}
+
+li:first-child {
+    color: #ffff00;
+}
+
+li:last-child {
+    color: #00fff7;
+}
+
+span:first-of-type {
+    color: #F00;
+}
+
+span:last-of-type {
+    color: rgb(117, 6, 6);
+}
+
+p:first-of-type {
+    color: #00f;
+}
+
+p:last-of-type {
+    color: rgb(255, 0, 251);
+}
+
+.container-footer :not(a) {
+    color: #fd7544;
+    font-size: 26px;
+}
+
+li:nth-child(3) {
+    color: #008000; 
+}
+
+li:nth-last-child(3) {
+    color: #0eb7dc; 
+    /* Estiliza de trás para frente */
+}

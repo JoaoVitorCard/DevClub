@@ -1,0 +1,45 @@
+/* SELETORES CSS
+    O seletor: '* {}', modifica todos os elementos da página.
+    Outros tipos de seletor são os ID e class. São chamados através do # para ID e o . para as classes
+    São selecionados através do nome da tag. EX:
+
+        - h1 {}
+  
+        
+    - Classes (class) - A classe seria como um CEP. Ela serve para identificar vários elementos. Ou seja, vários elementos HTML podem usar a mesma classe, e conseguimos estiliza-los no CSS.
+    - ID (Identificador único) - Já o ID seria como seu CPF e RG. Ele serve para identificar apenas um elemento. Ou seja, você só pode usar um ID específico uma vez na sua página HTML.
+*/
+
+* {
+    background-color: #ffebcdca;
+    margin: 50px;
+}
+
+#title {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#paragraph {
+    font-size: 16px;
+    color: #0606c3e4;
+}
+
+#button-1,
+#button-2 {
+    background-color: #008000;
+    border: #008838;
+    padding: 10px;
+    border-radius: 5px  ;
+}
+
+.width-page {
+    margin: auto;
+    width: 400px;
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+}

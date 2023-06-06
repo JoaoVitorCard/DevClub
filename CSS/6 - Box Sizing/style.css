@@ -1,0 +1,27 @@
+/* BOX SIZING
+
+    -------------------> SEMPRE PRIORIZE COMEÇAR OS PROJETOS COM O BOX-SIZING: BORDER-BOX; <-------------------------
+
+    Ele é responsável por manter todos os elementos de estilização dentro do tamanho que foi delimitado. Ex:
+
+    div {
+       width: 50px;
+       height: 50px;
+       border: 2px solid #000
+    }
+    
+    Ao contrário do tamanho do elemento ser de 50px, sem o box-sizing: border-box, ele provavelmente ficaria com o tamanho de 52px. Agora utilizando o border-box, ele fixa o tamanho em 50px, como foi delimitado anteriormente.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #e5ff00;
+    padding: 20px;
+    border: 10px solid #a3a3a3;
+}

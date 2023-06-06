@@ -1,0 +1,19 @@
+ /* O Ponto e virgula é obrigatório no final da propriedade */
+ h1 {
+     color: red;
+     background-color: black;
+ }
+
+ p {
+     font-size: 16px;
+     background-color: darkgray;
+     color: yellow;
+ }
+
+ button {
+     border-radius: 15px;
+     padding: 10px;
+     background-color: aqua;
+     border: none;
+     color: black;
+ }

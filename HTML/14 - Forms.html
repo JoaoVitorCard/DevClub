@@ -1,0 +1,36 @@
+<!-- FORMS
+    - Capturar dados de entrada
+    - Input -> Entrada
+
+    Action -> Define para qual URL será enviado os dados, vazio envia para a mesma URL
+    Method
+        - GET
+        - POST
+
+    Para enviar algum arquivo seja ele: Foto, Video, PDF etc. Precisa colocar o parâmetro no form (enctype="multipart/form-data"), para avisar ao servidor que ele irá receber esse tipo de dado.
+-->
+
+<form action="" method="get" enctype="multipart/form-data">
+    <label for="nome">
+        Nome:
+        <input type="text" name="nome" autocomplete="name">
+    </label>
+
+    <label for="endereco">
+        Endereço:
+        <input type="text" name="endereco" autocomplete="street-address">
+    </label>
+
+    <label for="numero">
+        Número:
+        <input type="number" name="numero" autocomplete="address-level3">
+    </label>
+
+    <label for="foto">
+        Foto:
+        <input type="file" name="foto">
+    </label>
+
+    <button type="reset">Limpar</button>
+    <button type="submit">Enviar</button>
+</form>

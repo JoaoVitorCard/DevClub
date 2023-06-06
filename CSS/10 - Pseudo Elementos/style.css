@@ -1,0 +1,33 @@
+input {
+    border: 3px solid #107123;
+    color: #0000ff;
+}
+
+input::placeholder {
+    color: #fb072f;
+}
+
+p {
+    color: #808080;
+    font-size: 46px;
+}
+
+p::first-letter {
+    color: #2424ab;
+}
+
+p::first-line {
+    color: #cf16aa;
+}
+
+a {
+    color: #aa5613;
+}
+
+a::before {
+    content: "😆";
+}
+
+a::after {
+    content: "😀";
+}
