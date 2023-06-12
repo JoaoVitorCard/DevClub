@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Conversor de Moeda</title>
 </head>
 
@@ -17,49 +20,52 @@
     </div>
 
     <div class="container-form">
+
+
       <div class="container-inputs">
-        <form action="">
-          <label for="">
-            <p>Converter <strong>de</strong></p>
-            <select name="" id="">
-              <option value="Dolar">US$ Dólar Americano</option>
-              <option value="Euro">€ Euro</option>
-              <option value="Bitcoin">₿ Bitcoin</option>
-            </select>
-          </label>
-          <label for="">
-            <p>Converter <strong>para</strong></p>
-            <select name="" id="">
-              <option value="Dolar">US$ Dólar Americano</option>
-              <option value="Euro">€ Euro</option>
-              <option value="Bitcoin">₿ Bitcoin</option>
-            </select>
-          </label>
-          <label for="">
-            <p><strong>Valor</strong></p>
-            <input type="number" name="" id="">
-          </label>
-          <label for="">
-            <input type="submit" value="Converter">
-          </label>
-        </form>
+        <label for="">
+          <p class="convert-paragraph">Converter <strong>de</strong></p>
+          <select name="" id="" class="convert-values">
+            <option value="Dolar">US$ Dólar Americano</option>
+            <option value="Euro">€ Euro</option>
+            <option value="Bitcoin">₿ Bitcoin</option>
+          </select>
+        </label>
+
+        <label for="">
+          <p class="convert-paragraph">Converter <strong>para</strong></p>
+          <select name="" id="" class="convert-values">
+            <option value="Dolar">US$ Dólar Americano</option>
+            <option value="Euro">€ Euro</option>
+            <option value="Bitcoin">₿ Bitcoin</option>
+          </select>
+        </label>
+
+        <label for="">
+          <p class="convert-paragraph"><strong>Valor</strong></p>
+          <input type="number" name="" id="" class="convert-values converted-value">
+        </label>
+
+        <button class="submit-button">Converter</button>
+
       </div>
 
       <div class="container-results">
-        <fieldset>
-          <figure>
-            <img src="./assets/brasil.svg" alt="Real Brasileiro">
-            <legend>Real</legend>
-            <p></p>
-          </figure>
-          <img src="./assets/arrow.png" alt="Arrow">
-          <figure>
-            <img src="./assets/estados-unidos.png" alt="Dólar Americano">
-            <legend>Dólar Americano</legend>
-            <p></p>
-          </figure>
-        </fieldset>
+        <figure>
+          <img src="./assets/brasil.svg" alt="Real Brasileiro">
+          <p class="result-paragraph">Real</p>
+          <p class="result-value">R$ 0,0</p>
+        </figure>
+
+        <img src="./assets/arrow.png" alt="Arrow">
+
+        <figure>
+          <img src="./assets/estados-unidos.png" alt="Dólar Americano">
+          <p class="result-paragraph">Dólar Americano</p>
+          <p class="result-value">US$ 0.0</p>
+        </figure>
       </div>
+
     </div>
 
   </div>
