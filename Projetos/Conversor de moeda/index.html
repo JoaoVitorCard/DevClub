@@ -15,26 +15,24 @@
 
 <body>
   <div class="container">
+
     <div class="container-logo">
       <img src="./assets/logo.svg" alt="Logo" class="logo">
     </div>
 
     <div class="container-form">
 
-
       <div class="container-inputs">
         <label for="">
           <p class="convert-paragraph">Converter <strong>de</strong></p>
-          <select name="" id="" class="convert-values">
-            <option value="Dolar">US$ Dólar Americano</option>
-            <option value="Euro">€ Euro</option>
-            <option value="Bitcoin">₿ Bitcoin</option>
+          <select class="convert-values">
+            <option value="Dolar">R$ Real Brasileiro</option>
           </select>
         </label>
 
         <label for="">
           <p class="convert-paragraph">Converter <strong>para</strong></p>
-          <select name="" id="" class="convert-values">
+          <select id="convertValues" class="convert-values">
             <option value="Dolar">US$ Dólar Americano</option>
             <option value="Euro">€ Euro</option>
             <option value="Bitcoin">₿ Bitcoin</option>
@@ -43,7 +41,7 @@
 
         <label for="">
           <p class="convert-paragraph"><strong>Valor</strong></p>
-          <input type="number" name="" id="" class="convert-values converted-value">
+          <input type="number" id="" class="convert-values converted-value">
         </label>
 
         <button class="submit-button">Converter</button>
@@ -54,15 +52,15 @@
         <figure>
           <img src="./assets/brasil.svg" alt="Real Brasileiro">
           <p class="result-paragraph">Real</p>
-          <p class="result-value">R$ 0,0</p>
+          <p id="result-value1" class="result-value ">R$ 0,0</p>
         </figure>
 
         <img src="./assets/arrow.png" alt="Arrow">
 
         <figure>
-          <img src="./assets/estados-unidos.png" alt="Dólar Americano">
-          <p class="result-paragraph">Dólar Americano</p>
-          <p class="result-value">US$ 0.0</p>
+          <img src="./assets/estados-unidos.png" alt="Dólar Americano" id="converted-img">
+          <p id="converterd-paragraph" class="result-paragraph">Dólar Americano</p>
+          <p id="result-value2" class="result-value ">US$ 0.0</p>
         </figure>
       </div>
 
