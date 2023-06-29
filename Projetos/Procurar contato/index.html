@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procurar Contato</title>
+</head>
+
+<body>
+  <input type="text" id="contact-name" placeholder="Digite o nome do contato">
+  <p id="result-paragraph"></p>
+  <button onclick="searchContact()">Procurar</button>
+</body>
+<script>
+
+  const contactName = document.getElementById("contact-name")
+  const p = document.getElementById("result-paragraph")
+
+  const contacts = [
+    { name: 'João Vitor', phoneNumber: '(62) 99401-6098' },
+    { name: 'Rodolfo', phoneNumber: '(62) 99434-4343' },
+    { name: 'Anna', phoneNumber: '(62)99124-4875' },
+    { name: 'Léa', phoneNumber: '(62)99147-8300' }
+  ]
+
+  function searchContact() {
+
+    if (contactName.value.length === 0) {
+      p.innerHTML = "Campo vazio, digite um contato válido."
+    }
+
+    for (const contact of contacts) {
+      if (contactName.value.normalize().toLowerCase() === contact.name.normalize().toLowerCase()) {
+        p.innerHTML = "Nome: " + contact.name + "<br>Número de tel: " + contact.phoneNumber
+        return
+      } else {
+        p.innerHTML = "Contato não encontrado!"
+      }
+    }
+
+  }
+</script>
+
+</html>

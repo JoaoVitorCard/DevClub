@@ -20,16 +20,18 @@
 
     <div class="main-content">
       <p class="main-paragraph">Sortear um número</p>
-      <input type="text" class="get-random-number-input" placeholder="Mínimo">
-      <input type="text" class="get-random-number-input" placeholder="Máximo">
-      <p class="result-paragraph"><!--Aqui vai o texto com o resultado do sorteio --></p>
+      <input type="text" id="number1" class="get-random-number-input" placeholder="Mínimo">
+      <input type="text" id="number2" class="get-random-number-input" placeholder="Máximo">
+      <p class="result-paragraph" id="result-paragraph"><!--Aqui vai o texto com o resultado do sorteio --></p>
     </div>
 
     <div class="result-button">
-      <button class="lucky-button">Sortear</button>
+      <button class="lucky-button" id="raffle-button">Sortear</button>
+      <button class="lucky-button" id="reloadButton" onclick="window.location.reload()">Limpar dados</button>
     </div>
   </div>
 
 </body>
+<script src="scripts.js"></script>
 
 </html>

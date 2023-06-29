@@ -11,8 +11,7 @@
 }
 
 .container,
-.logo,
-.result-button {
+.logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,8 @@
   height: 210px;
 }
 
-.main-paragraph {
+.main-paragraph,
+.result-paragraph {
   font-style: normal;
   text-align: center;
   font-weight: 400;
@@ -57,7 +57,7 @@
 }
 
 .lucky-button {
-  margin-top: 25px;
+  margin: 20px 15px;
   width: 190px;
   height: 50px;
   font-weight: 700;
