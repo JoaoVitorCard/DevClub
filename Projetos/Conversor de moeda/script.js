@@ -6,12 +6,14 @@ const chosenCurrencyToConvert = document.querySelector("#convertValues")
 const convertedImg = document.querySelector("#converted-img")
 const convertedParagraph = document.querySelector("#converterd-paragraph")
 
-function convertValue() {
+const convertValue = async () => {
   const valueToConvert = currencyValue.value
-  const dolarToday = 4.86
-  const euroToday = 5.23
-  const bitCoinToday = 125.889
+  const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
+  const dolarToday = data.USDBRL.high
+  const euroToday = data.EURBRL.high
+  const bitCoinToday = data.BTCBRL.high
   let valueConverted
+  console.log(data)
 
   if (chosenCurrencyToConvert.value === "Dolar") {
     valueConverted = valueToConvert / dolarToday

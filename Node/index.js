@@ -31,16 +31,26 @@ const checkUserId = (request, response, next) => {
 
   next()
 }
+
 app.get('/users', (request, response) => {
   return response.json(users)
 })
 
 app.post('/users', (request, response) => {
-  const { name, age } = request.body
-  const user = { id: uuid.v4(), name, age }
-  users.push(user)
+  try {
+    const { name, age } = request.body
 
-  return response.status(201).json(user)
+    if (age < 18) throw new Error('Only allowed users over 18 years old')
+
+    const user = { id: uuid.v4(), name, age }
+    users.push(user)
+
+    return response.status(201).json(user)
+  } catch (err) {
+    return response.status(500).json({ error: err.message })
+  } finally /*OPICIONAL*/ {
+    console.log('Tudo finalizado')
+  }
 })
 
 app.put('/users/:id', checkUserId, (request, response) => {
